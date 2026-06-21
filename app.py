@@ -21,18 +21,28 @@ from utils import *
 
 import os
 import gdown
+#import streamlit as st
 
 MODEL_PATH = "RAVDESS_ST_ResViT_02_8576.pth"
 
 FILE_ID = "1jRvay38HsbnsCsjcpa9NLjjNjUPrDvkI"
 
-if not os.path.exists(MODEL_PATH):
 
-    gdown.download(
-        id=FILE_ID,
-        output=MODEL_PATH,
-        quiet=False
-    )
+@st.cache_resource
+def download_model():
+
+    if not os.path.exists(MODEL_PATH):
+
+        gdown.download(
+            id=FILE_ID,
+            output=MODEL_PATH,
+            quiet=False
+        )
+
+    return MODEL_PATH
+
+
+MODEL_PATH = download_model()
 #from emotion_classes import emotion_classes
 
 
