@@ -14,10 +14,25 @@ from torchvision import transforms
 
 from audio_recorder_streamlit import audio_recorder
 
-from model import HybridResNetViT
+#from model import HybridResNetViT
 
 from utils import *
 
+
+import os
+import gdown
+
+MODEL_PATH = "RAVDESS_ST_ResViT_02_8576.pth"
+
+FILE_ID = "1jRvay38HsbnsCsjcpa9NLjjNjUPrDvkI"
+
+if not os.path.exists(MODEL_PATH):
+
+    gdown.download(
+        id=FILE_ID,
+        output=MODEL_PATH,
+        quiet=False
+    )
 #from emotion_classes import emotion_classes
 
 
