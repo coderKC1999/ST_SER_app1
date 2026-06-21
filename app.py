@@ -208,8 +208,7 @@ if audio_path:
 
         y = y[-samples:]
     
-    st.write("Audio samples:", len(y))
-    st.write("Sampling rate:", sr)
+    st.write("Audio samples:", len(y), "Sampling rate:", sr)
     S,f,t = stockwell_spectrogram(
 
         y,
@@ -217,9 +216,9 @@ if audio_path:
         sr
 
     )
-    st.write("S shape:", S.shape)
-    st.write("f shape:", f.shape)
-    st.write("t shape:", t.shape)
+    # st.write("S shape:", S.shape)
+    # st.write("f shape:", f.shape)
+    # st.write("t shape:", t.shape)
 
     image_path = "temp.png"
 
