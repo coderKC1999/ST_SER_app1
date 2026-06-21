@@ -69,7 +69,7 @@ def load_model():
 
         torch.load(
 
-            "RAVDESS_ST_ResViT_02_8576.pth",
+            MODEL_PATH,
 
             map_location="cpu"
 
