@@ -46,6 +46,7 @@ MODEL_PATH = download_model()
 #from emotion_classes import emotion_classes
 
 '''Kids are talking by the door.'''
+'''Dogs are sitting by the door. '''
 emotion_classes = [
 "Anger","calm","Disgust","Fear",
 "Happyness","neutral","Sadness","Surprised"
