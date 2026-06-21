@@ -14,7 +14,7 @@ from torchvision import transforms
 
 from audio_recorder_streamlit import audio_recorder
 
-#from model import HybridResNetViT
+from model import HybridResNetViT
 
 from utils import *
 
