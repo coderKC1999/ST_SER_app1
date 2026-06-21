@@ -9,3 +9,4 @@ scipy
 soundfile
 audio-recorder-streamlit
 pillow
+gdown
